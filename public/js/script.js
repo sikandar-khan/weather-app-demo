@@ -1,4 +1,3 @@
-console.log('client side javascript has been loaded');
 const form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
