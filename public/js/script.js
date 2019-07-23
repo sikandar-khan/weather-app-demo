@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
         return console.log('location cannot be empty');
 
     messageParagraph.textContent = 'Loading...';
-    fetch(`http://localhost:3000/weather?address=${search.value}`).then((res) => {
+    fetch(`/weather?address=${search.value}`).then((res) => {
         return res.json();
     }).then((data) => {
         if (data['error']) {

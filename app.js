@@ -8,7 +8,7 @@ const app = express();
 const static = path.join(__dirname, 'public');
 const dynamic = path.join(__dirname, 'templates/views');
 const partial = path.join(__dirname, 'templates/partials');
-
+const port = process.env['PORT'] || 3000;
 hbs.registerPartials(partial);
 
 app
@@ -59,4 +59,4 @@ app
             location: _coordinate['features'][0]['place_name']
         });
     })
-    .listen(3000, () => console.log('Server is running on port 3000!'))
+    .listen(port, () => console.log(`Server is running on port ${port}`));
